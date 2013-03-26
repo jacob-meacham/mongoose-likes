@@ -1,6 +1,7 @@
 var votesPlugin = require('mongoose-votes');
 
 module.exports = exports = function(schema, options) {
+    options = options || {};
     votesPlugin.call(this, schema, {
         disableDownvotes: true,
         tallyName: options.likesName || "likes",
