@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-votes",
+  "name": "mongoose-likes",
   "description": "Mongoose plugin to track likes for an object",
   "author": {
     "name": "Jason Choy",
