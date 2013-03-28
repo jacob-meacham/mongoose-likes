@@ -19,9 +19,9 @@ var mongoose = require('mongoose');
 var likesPlugin = require('mongoose-likes');
 
 var postSchema = mongoose.Schema({
-author: ObjectId,
-title: String,
-body: String
+    author: ObjectId,
+    title: String,
+    body: String
 });
 
 postSchema.plugin(likesPlugin);
@@ -35,11 +35,11 @@ var Post = mongoose.model('Post', postSchema);
 var p = ... ; // some post object
 
 p.like(likerId, function(err) {
-...
+    ...
 });
 
 p.dislike(dislikerId, function(err) {
-...
+    ...
 });
 ```
 
@@ -47,11 +47,11 @@ p.dislike(dislikerId, function(err) {
 
 ```javascript
 p.cancelLike(likerId, function(err) {
-...
+    ...
 });
 
 p.cancelDislike(dislikerId, function(err) {
-
+    ...
 });
 ```
 
@@ -73,26 +73,26 @@ mongoose-likes can be customised in a number of ways. Here is a list of all opti
 
 ```javascript
 postSchema.plugin(likesPlugin, {
-// behaviour
-disableDislikes: false, // if true, turns off disliking
-
-// Property names
-likesName: 'likes',
-dislikesName: 'dislikes',
-scoreName: 'score',
-
-likersName: 'likers',
-dislikersName: 'dislikers',
-
-// Function names
-likeFuncName: 'like',
-dislikeFuncName: 'dislike',
-cancelLikeFuncName: 'cancelLike',
-cancelDislikeFuncName: 'cancelDislike',
-
-// other options
-likerIdType: ObjectId, // The type to use in the likers/dislikers array
-indexed: false // whether to generate the indexes {_id:1, likers:1}, and {_id:1, dislikers:1}
+    // behaviour
+    disableDislikes: false, // if true, turns off disliking
+    
+    // Property names
+    likesName: 'likes',
+    dislikesName: 'dislikes',
+    scoreName: 'score',
+    
+    likersName: 'likers',
+    dislikersName: 'dislikers',
+    
+    // Function names
+    likeFuncName: 'like',
+    dislikeFuncName: 'dislike',
+    cancelLikeFuncName: 'cancelLike',
+    cancelDislikeFuncName: 'cancelDislike',
+    
+    // other options
+    likerIdType: ObjectId, // The type to use in the likers/dislikers array
+    indexed: false // whether to generate the indexes {_id:1, likers:1}, and {_id:1, dislikers:1}
 });
 ```
 
