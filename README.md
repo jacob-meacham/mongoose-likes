@@ -68,7 +68,7 @@ mongoose-likes can be customised in a number of ways. Here is a list of all opti
         disableDislikes: false, // if true, turns off disliking
 
         // Property names
-	likesName: 'likes',
+        likesName: 'likes',
         dislikesName: 'dislikes',
         scoreName: 'score',
 
