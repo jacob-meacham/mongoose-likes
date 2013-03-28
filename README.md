@@ -1,7 +1,7 @@
 mongoose-likes
 ==============
 
-Mongoose plugin to track likes/dislikes for an object. This is a customisation of the mongoose-votes plugin which changes the terminology to be more appropriate for likes/dislikes.
+Mongoose plugin to track likes/dislikes for an object. This is a customisation of the [mongoose-votes](http://github.com/jjwchoy/mongoose-votes) plugin which changes the terminology to be more appropriate for likes/dislikes.
 
 Status
 ------
