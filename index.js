@@ -3,10 +3,16 @@ var votesPlugin = require('mongoose-votes');
 module.exports = exports = function(schema, options) {
     options = options || {};
     votesPlugin.call(this, schema, {
-        disableDownvotes: true,
+        disableDownvotes: options.disableDislikes,
         tallyName: options.likesName || "likes",
         upvotesName: options.likesName || "likes",
         upvotersName: options.likersName || "likers",
+        downvotesName: options.dislikesName || "dislikes",
+        downvotersName: options.dislikersName || "dislikers",
+        upvoteFuncName: options.likeFuncName || "like",
+        cancelUpvoteFuncName: options.cancelLikeFuncName || "cancelLike",
+        downvoteFuncName: options.dislikeFuncName || "dislike",
+        cancelDownvoteFuncName: options.cancelDislikeFuncName || "cancelDislike",
         voterIdType: options.likerIdType,
         indexed: options.indexed
     });
