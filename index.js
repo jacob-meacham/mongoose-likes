@@ -4,7 +4,7 @@ module.exports = exports = function(schema, options) {
     options = options || {};
     votesPlugin.call(this, schema, {
         disableDownvotes: options.disableDislikes,
-        tallyName: options.likesName || "likes",
+        tallyName: options.scoreName || "score",
         upvotesName: options.likesName || "likes",
         upvotersName: options.likersName || "likers",
         downvotesName: options.dislikesName || "dislikes",
