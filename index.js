@@ -15,6 +15,7 @@ module.exports = exports = function(schema, options) {
         cancelDownvoteFuncName: options.cancelDislikeFuncName || "cancelDislike",
         findUpvotesFuncName: options.findLikesFuncName || "findLikes",
         findDownvotesFuncName: options.findDislikesFuncName || "findDislikes",
+        highestVotedFuncName: options.mostLikedFuncName || 'mostLiked',
         voterIdType: options.likerIdType,
         indexed: options.indexed
     });
