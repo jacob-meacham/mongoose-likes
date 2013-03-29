@@ -41,6 +41,16 @@ p.like(likerId, function(err) {
 p.dislike(dislikerId, function(err) {
     ...
 });
+
+// These functions are also defined as statics
+
+Post.like(post.id, likerId, function(err) {
+   ...
+});
+
+Post.dislike(post.id, dislikerId, function(err) {
+   ...
+});
 ```
 
 ### If a user changes their mind
@@ -53,7 +63,38 @@ p.cancelLike(likerId, function(err) {
 p.cancelDislike(dislikerId, function(err) {
     ...
 });
+
+// These functions are also defined as statics
+
+Post.cancelLike(post.id, likerId, function(err) {
+    ...
+});
+
+Post.cancelDislike(post.id, dislikerId, function(err) {
+    ...
+});
 ```
+
+### Finding out what a user has liked/disliked
+
+#### Find every post a user has liked
+
+```javascript
+Post.findLikes(userId, function(err, likes) {
+   // likes is an array of objects with a single property: _id
+});
+```
+
+#### Determine if a user has liked a particular post
+```javascript
+Post.findLikes(userId, {_id:post.id}, function(err, likes) {
+    if (!err) {
+        var hasLiked = !!likes.length;
+    }
+});
+```
+
+`findDislikes` works in the same manner
 
 ### Properties added
 
@@ -89,6 +130,8 @@ postSchema.plugin(likesPlugin, {
     dislikeFuncName: 'dislike',
     cancelLikeFuncName: 'cancelLike',
     cancelDislikeFuncName: 'cancelDislike',
+    findLikes: 'findLikes',
+    findDislikes: 'findDislikes',
     
     // other options
     likerIdType: ObjectId, // The type to use in the likers/dislikers array

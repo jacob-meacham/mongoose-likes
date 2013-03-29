@@ -13,6 +13,8 @@ module.exports = exports = function(schema, options) {
         cancelUpvoteFuncName: options.cancelLikeFuncName || "cancelLike",
         downvoteFuncName: options.dislikeFuncName || "dislike",
         cancelDownvoteFuncName: options.cancelDislikeFuncName || "cancelDislike",
+        findUpvotesFuncName: options.findLikesFuncName || "findLikes",
+        findDownvotesFuncName: options.findDislikesFuncName || "findDislikes",
         voterIdType: options.likerIdType,
         indexed: options.indexed
     });
