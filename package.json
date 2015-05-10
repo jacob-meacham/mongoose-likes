@@ -21,8 +21,10 @@
     "mongoose"
   ],
   "dependencies": {
-    "mongoose": "3.5.x",
-    "mongoose-votes": "0.1.0"
+    "mongoose-votes": "git://github.com/jacob-meacham/mongoose-votes.git#555a666680683b652fd7bfa7aa5e72b35e6f2de6"
+  },
+  "peerDependencies": {
+    "mongoose": "3.5.x"
   },
   "license": "MIT"
 }
