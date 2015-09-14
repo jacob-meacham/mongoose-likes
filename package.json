@@ -21,7 +21,7 @@
     "mongoose"
   ],
   "dependencies": {
-    "mongoose-votes": "git://github.com/jacob-meacham/mongoose-votes.git#555a666680683b652fd7bfa7aa5e72b35e6f2de6"
+    "mongoose-votes": "git://github.com/jacob-meacham/mongoose-votes.git#7b507239d51aabc72b3135768f1ef9bdfe84c333"
   },
   "peerDependencies": {
     "mongoose": ">= 3.5.0 < 4"
